@@ -46,8 +46,13 @@ BASE_YDL_OPTIONS = {
     # Allow geo-bypass for restricted content
     'geo_bypass': True,
     'geo_bypass_country': 'US',
-    # Audio-only format selection
-    'format': 'bestaudio[ext=m4a]/bestaudio[ext=mp3]/bestaudio/best',
+    # Flexible audio format selection - accept any available audio
+    'format': 'bestaudio/best',
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',
+        'preferredcodec': 'm4a',
+        'preferredquality': '192',
+    }],
     'outtmpl': os.path.join(CACHE_DIR, '%(id)s.%(ext)s'),
 }
 
