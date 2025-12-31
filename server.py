@@ -35,7 +35,7 @@ BASE_YDL_OPTIONS = {
     'socket_timeout': 60,
     'retries': 5,
     'skip_unavailable_fragments': True,
-    # Use exported cookie file for authentication
+    # Cookie file for YouTube authentication
     'cookiefile': os.path.join(os.path.dirname(__file__), 'youtube_cookies.txt'),
     # Browser-like headers to avoid bot detection
     'http_headers': {
