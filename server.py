@@ -35,6 +35,8 @@ BASE_YDL_OPTIONS = {
     'socket_timeout': 60,
     'retries': 5,
     'skip_unavailable_fragments': True,
+    # Use exported cookie file for authentication
+    'cookiefile': os.path.join(os.path.dirname(__file__), 'youtube_cookies.txt'),
     # Browser-like headers to avoid bot detection
     'http_headers': {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
