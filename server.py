@@ -46,8 +46,7 @@ BASE_YDL_OPTIONS = {
     # Allow geo-bypass for restricted content
     'geo_bypass': True,
     'geo_bypass_country': 'US',
-    # Simple format - just get best available audio
-    'format': 'bestaudio/best',
+    # No format specified - let yt-dlp choose automatically (most compatible)
     'outtmpl': os.path.join(CACHE_DIR, '%(id)s.%(ext)s'),
 }
 
